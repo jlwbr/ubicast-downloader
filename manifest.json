@@ -1,6 +1,5 @@
 {
-
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "UbiCast Downloader",
   "version": "1.0",
 
@@ -12,18 +11,20 @@
   },
 
   "permissions": [
-        "webRequest",
-        "<all_urls>"
+    "webRequest"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
   ],
 
   "background": {
-    "scripts": ["downloader.js"]
+    "service_worker": "downloader.js"
   },
 
-  "browser_action": {
+  "action": {
     "default_icon": "icons/icon-96.png",
     "default_title": "UbiCast Downloader",
     "default_popup": "menu/downloader_popup.html"
   }
-
 }

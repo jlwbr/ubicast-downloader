@@ -1,3 +1,13 @@
+// Service worker initialization
+self.addEventListener('install', (event) => {
+  console.log('Service Worker installed');
+});
+
+self.addEventListener('activate', (event) => {
+  console.log('Service Worker activated');
+});
+
+// Initialize webRequest listener
 chrome.webRequest.onCompleted.addListener(
     logURL,
     {urls: ['*://*/api/v2/medias/modes/*']} // see: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns
