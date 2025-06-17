@@ -1,12 +1,3 @@
-// Service worker initialization
-self.addEventListener('install', (event) => {
-  console.log('Service Worker installed');
-});
-
-self.addEventListener('activate', (event) => {
-  console.log('Service Worker activated');
-});
-
 // Initialize webRequest listener
 chrome.webRequest.onCompleted.addListener(
     logURL,
